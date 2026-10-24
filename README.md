@@ -10,7 +10,7 @@ Ouvrir `notice-exploder.html` dans un navigateur. Aucune installation ni compila
 - Chargement par ARK BnF via le service SRU (connexion Internet nécessaire).
 - Navigation par bloc, champ, occurrence et sous-champ.
 - Recherche, arbre, source brute et exports SVG / JSON.
-- ISO2709 binaire non pris en charge.
+- Import ISO2709 UTF-8 (.mrc, .iso2709, .iso, .marc), y compris plusieurs notices. Validation du guide, du répertoire et des terminateurs. Les encodages historiques ISO 5426 / MARC-8 ne sont pas décodés : réexporter en UTF-8.
 
 ## GitHub Pages
 
@@ -22,4 +22,4 @@ Adresse prévue : https://didierthebault-web.github.io/notice-exploder/
 
 ## Données
 
-Les fichiers importés et le texte collé sont traités localement. Le chargement par ARK contacte directement le service public de la BnF. Aucune correction automatique des valeurs sources.
+Les fichiers importés et le texte collé sont traités localement. Le chargement par ARK contacte directement le service public de la BnF. Aucune correction automatique des valeurs sources. Les octets ISO2709 originaux sont conservés en base64 dans le JSON et téléchargeables à l’identique dans la vue Notice brute. Les marqueurs de non-tri restent dans les valeurs sources ; seul le titre de présentation les masque avec un libellé explicite. La vue brute rend visibles les séparateurs binaires. Aucun fichier de données utilisateur n’est inclus dans ce dépôt.
